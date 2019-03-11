@@ -429,7 +429,7 @@ a {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .home_banner_area {
-  background: url(../img/banner/home1.jpeg) no-repeat center bottom;
+  background: url(../img/banner/home-1.jpg) no-repeat center top;
   position: relative;
   z-index: 1;
   height: 900px; }
