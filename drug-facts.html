@@ -27,7 +27,7 @@
 		<div class="top_menu row m0">
 			<div class="container">
 				<div class="float-left">
-					
+
 				</div>
 				<div class="float-right">
 					<ul class="right_side">
@@ -54,8 +54,9 @@
 					<a class="navbar-brand logo_h" href="index.html">
 						<img src="img/abuse.png" width=80 height="45" alt="">
 					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-					 aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -68,7 +69,7 @@
 									<li class="nav-item">
 										<a class="nav-link" href="index.html">Home</a>
 									</li>
-									
+
 									<li class="nav-item">
 										<a class="nav-link" href="contact.html">Contact</a>
 									</li>
@@ -88,7 +89,7 @@
 			<div class="container">
 				<div class="banner_content text-left">
 					<h2>Drug Facts</h2>
-					
+
 				</div>
 			</div>
 		</div>
@@ -100,52 +101,185 @@
 		<div class="container">
 			<h2 class=" title_color">Resources</h2>
 			<div class="whole-wrap">
-		<div class="container">
-			<div class="section-top-border">
-				<h3 class="mb-30 title_color">Morphine</h3>
-				<div class="row">
-					<div class="col-md-3">
-						<img src="img/elements/morphine.png" alt="" class="img-fluid">
+				<div>
+					<style>
+						* {
+							box-sizing: border-box;
+						}
+
+						#myInput {
+							background-image: url('/css/searchicon.png');
+							background-position: 10px 12px;
+							background-repeat: no-repeat;
+							width: 100%;
+							font-size: 16px;
+							padding: 12px 20px 12px 40px;
+							border: 1px solid #ddd;
+							margin-bottom: 12px;
+						}
+
+						#myUL {
+							list-style-type: none;
+							padding: 0;
+							margin: 0;
+						}
+
+						#myUL li a {
+							border: 1px solid #ddd;
+							margin-top: -1px;
+							/* Prevent double borders */
+							background-color: #f6f6f6;
+							padding: 12px;
+							text-decoration: none;
+							font-size: 18px;
+							color: black;
+							display: block
+						}
+
+						#myUL li a:hover:not(.header) {
+							background-color: #eee;
+						}
+					</style>
+					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
+						title="Type in a name">
+
+					<ul id="myUL">
+
+						<li><a href="#Hydro">Hydrocodone</a></li>
+						<li><a href="#Metha">Methadone </a></li>
+						<li><a href="#Morph">Morphine</a></li>
+						<li><a href="#Fent">Fentanyl</a></li>
+						<li><a href="#Opium">Opium</a></li>
+						<li><a href="#Oxyc">Oxycodone</a></li>
+					</ul>
+
+					<script>
+						function myFunction() {
+							var input, filter, ul, li, a, i, txtValue;
+							input = document.getElementById("myInput");
+							filter = input.value.toUpperCase();
+							ul = document.getElementById("myUL");
+							li = ul.getElementsByTagName("li");
+							for (i = 0; i < li.length; i++) {
+								a = li[i].getElementsByTagName("a")[0];
+								txtValue = a.textContent || a.innerText;
+								if (txtValue.toUpperCase().indexOf(filter) > -1) {
+									li[i].style.display = "";
+								} else {
+									li[i].style.display = "none";
+								}
+							}
+						}
+					</script>
+				</div>
+				<div class="container" id="Morph">
+					<div class="section-top-border">
+						<h3 class="mb-30 title_color">Morphine</h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="img/elements/morphine.png" alt="" class="img-fluid">
+							</div>
+							<div class="col-md-9 mt-sm-20 left-align-p">
+								<p>Morphine is used to help relieve moderate to severe pain. Morphine belongs to a class
+									of drugs known as opioid analgesics. It changes how the brain makes the body feel or
+									respond to pain. Some side effects include nausea, vomiting, constipation,
+									lightheadedness, dizziness, drowsiness, or sweating.</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-9 mt-sm-20 left-align-p">
-						<p>Morphine is used to help relieve moderate to severe pain. Morphine belongs to a class of drugs known as opioid analgesics. It changes how the brain makes the body feel or respond to pain. Some side effects include nausea, vomiting, constipation, lightheadedness, dizziness, drowsiness, or sweating.</p>
+				</div>
+				<div class="container" id="Hydro">
+					<div class="section-top-border">
+						<h3 class="mb-30 title_color">Hydrocodone</h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="img/elements/hydro.png" alt="" class="img-fluid">
+							</div>
+							<div class="col-md-9 mt-sm-20 left-align-p">
+								<p>Hydrocodone is used for a short period of time to help relieve moderate to severe
+									pain. It contains an opioid pain reliever and a non-steroidal anti-inflammatory drug
+									NSAID(ibuprofen). Hydrocodone works in the brain to change how the body feels and
+									responds to pain.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container" id="Metha">
+					<div class="section-top-border">
+						<h3 class="mb-30 title_color">Methadone</h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="img/elements/methadone.png" alt="" class="img-fluid">
+							</div>
+							<div class="col-md-9 mt-sm-20 left-align-p">
+								<p>Methadone is one of the longer acting opioid agonists, staying active in the 
+									bloodstream for close to a full day, meaning that it can be prescribed in lower 
+									doses less often in order to keep opioid withdrawal symptoms at bay. Methadone is 
+									still an opioid agonist drug though; therefore, it does have the potential to be 
+									abused and also lead to the development of physical dependence and addiction.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container" id="Fent">
+					<div class="section-top-border">
+						<h3 class="mb-30 title_color">Fentanyl </h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="img/elements/fentanyl.jpg" alt="" class="img-fluid">
+							</div>
+							<div class="col-md-9 mt-sm-20 left-align-p">
+								<p>Fentanyl is prescribed to treat chronic and severe pain in those who are tolerant to
+									opioids. Fentanyl is a Schedule II drug that is 50-100 times more potent than
+									morphine.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container" id="Opium">
+					<div class="section-top-border">
+						<h3 class="mb-30 title_color">Opium</h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="img/elements/opium.png" alt="" class="img-fluid">
+							</div>
+							<div class="col-md-9 mt-sm-20 left-align-p">
+								<p>For years, opium was a widely-used drug derived from the crude botanical extract
+									extruded from the opium poppy plant. With minimal processing, opium consisted of a
+									mixture of naturally-occurring opiate alkaloids—substances that serve as the
+									building blocks for the synthesis of many modern opioid drugs. Opium was sometimes
+									distributed as a liquid or solid, but most commonly encountered as a brownish
+									powder, according to the DEA. Opium was most commonly smoked but could also be
+									pressed into pill form or dissolved into a tincture or other solution for oral use
+									or injection.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container" id="Oxyc">
+					<div class="section-top-border">
+						<h3 class="mb-30 title_color">Oxycodone</h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="img/elements/oxo.png" alt="" class="img-fluid">
+							</div>
+							<div class="col-md-9 mt-sm-20 left-align-p">
+								<p>Oxycodone belongs to a class of drugs known as opioid analgesics. It works in the
+									brain to change how the body feels and responds to pain.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container">
-			<div class="section-top-border">
-				<h3 class="mb-30 title_color">Hydrocodone</h3>
-				<div class="row">
-					<div class="col-md-3">
-						<img src="img/elements/hydro.png" alt="" class="img-fluid">
-					</div>
-					<div class="col-md-9 mt-sm-20 left-align-p">
-						<p>Hydrocodone is used for a short period of time to help relieve moderate to severe pain. It contains an opioid pain reliever and a non-steroidal anti-inflammatory drug NSAID(ibuprofen). Hydrocodone works in the brain to change how the body feels and responds to pain.
-</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="section-top-border">
-				<h3 class="mb-30 title_color">Oxycodone</h3>
-				<div class="row">
-					<div class="col-md-3">
-						<img src="img/elements/oxo.png" alt="" class="img-fluid">
-					</div>
-					<div class="col-md-9 mt-sm-20 left-align-p">
-						<p>Oxycodone belongs to a class of drugs known as opioid analgesics. It works in the brain to change how the body feels and responds to pain. 
-</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
 	</section>
 	<!-- End Sample Area -->
 	<!-- Start Button -->
-	
+
 	<!-- End Align Area -->
 
 	<!--================ Start Footer Area  =================-->
