@@ -201,5 +201,5 @@ window.survey = new Survey.Model(json);
 $("#surveyElement").SurveyWindow({model: survey, isExpanded: true, onComplete: sendDataToServer});
 
 function sendDataToServer(survey) {
-    alert("The results are: " + JSON.stringify(survey.data)+ " Add the scores you've answered \"yes\" to. A score of 3 or lower indicates low risk for future opioid abuse, a score of 4 to 7 indicates moderate risk for opioid abuse, and a score of 8 or higher indicates a high risk for opioid abuse.\n\n-Questionnaire developed by Lynn R. Webster, MD to asses risk of opioid addiction.");
+    alert("The results are: " + JSON.stringify(survey.data) + " Add the scores you've answered \"yes\" to. A score of 3 or lower indicates low risk for future opioid abuse, a score of 4 to 7 indicates moderate risk for opioid abuse, and a score of 8 or higher indicates a high risk for opioid abuse.\n\n-Questionnaire developed by Lynn R. Webster, MD to asses risk of opioid addiction.");
 }
